@@ -1,0 +1,256 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: aliceblue;
+}
+.nav{
+    position: fixed;
+}
+.logo img{
+    height: 6rem;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+}
+hr{
+    position: fixed;
+    background-color: #000;
+    width: 85rem;
+    height: 0.1rem;
+    top: 6.7rem;
+}
+.mainNav{
+    position: fixed;
+    top: 4.7rem;
+    margin-left: -1rem;
+}
+.mainNav li{
+    display: inline;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    color: rgb(102, 12, 97);
+    cursor: pointer;
+}
+#menu-bar{
+    display: none;
+}
+.nav label{
+    font-size: 1.4rem;
+    color: rgb(102, 12, 97);
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    top: 6rem;
+}
+.homeImg{
+    background: url(./Images/download.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 35rem;
+    width: 82.2rem;
+    margin-top: 8rem;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: rgb(102, 12, 97);
+    animation-name: Change;
+    animation-duration: 15s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+a{
+    text-decoration: none;
+    color: rgb(102, 12, 97);
+}
+.mainContent{
+    position: relative;
+    background-color: #000;
+    margin-right: 0.5rem;
+    margin-left: 0.7rem;
+    height: 30rem;
+    color: aliceblue;
+    background: linear-gradient(to left top,rgb(102, 6, 102)10%,rgb(156, 36, 156)40%,rgb(211, 161, 211)75%);
+    border-radius: 2rem;
+    align-items: center;
+}
+.mainContent h1{
+    position: relative;
+    top: 4rem;
+    color: aliceblue;
+}
+#allservices{
+    position: relative;
+    top: 9rem;
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+}
+#all{
+    margin-left: 3rem;
+    display: inline;
+}
+#all1{
+    margin-left: 3.2rem;
+    display: inline;
+}
+.allservices .smile1{
+    position: relative;
+    top: 0.6rem;
+}
+.allservices .orthodontic{
+    position: relative;
+    top: 1rem;
+}
+.allservices .smile{
+    position: relative;
+    top: 1rem;
+}
+.allservices .cosmetic{
+    position: relative;
+    top: 0.4rem;
+}
+.allservices .mouth{
+    position: relative;
+    top: 1.2rem;
+}
+.allservices .pop1{
+    background: linear-gradient(to right bottom,rgb(211, 161, 211)20%,rgb(156, 36, 156)50%,rgb(102, 6, 102)85%);
+    color: white;
+    position: fixed;
+    height: 30.2rem;
+    width: 27rem;
+    bottom: 4rem;
+    left: 28rem;
+    border-radius: 4rem;
+    box-shadow: 1rem 1rem 1rem black;
+    text-indent: 2rem;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+.allservices .pop1.active{
+    transform: scale(1);
+    z-index: 100;
+    transition: transform .5s ease, height .2s ease;
+}
+.allservices .pop1 .img{
+    position: fixed;
+    top: 4rem;
+    left: 8.5rem;
+}
+.allservices .pop1 p{
+    position: relative;
+    top: 12.5rem;
+}
+.allservices .pop1 a{
+    text-decoration: underline;
+    position: relative;
+    top: 15rem;
+    color: white;
+    left: 16rem;
+}
+.allservices button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.allservices .close button{
+    font-size: 2.2rem;
+    color: aliceblue;
+    position: relative;
+    left: 21rem;
+    top: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+@keyframes Change {
+    50%{
+        background-image: url(./Images/lab.png);
+    }
+    100%{
+        background-image: url(./Images/lab2.png);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:62rem){
+    .nav{
+        padding: 1rem;
+    }
+    .nav label{
+        display: initial;
+    }
+    .nav .mainNav{
+        position: absolute;
+        top: 0.1rem;
+        margin-left: 1.8rem;
+        margin-top: -0.5rem;
+        width: 10rem;
+        left: 0;
+        right: 0;
+        background-color: rgb(129, 24, 124);
+        border-radius: 3rem;
+        display: none;
+    }
+    .nav .mainNav ol li{
+        position: relative;
+        width: 100%;
+        color: aliceblue;
+        left: 0.5rem;
+        cursor: pointer;
+    }
+    .mainNav a{
+        color: aliceblue;
+    }
+    #menu-bar:checked ~ .mainNav{
+        display: initial;
+    }
+    .homeImg{
+        width: 23.8rem;
+        height: 30rem;
+    }
+    .mainContent{
+        width: 24.7rem;
+        height: 60rem;
+    }
+    #allservices{
+        position: relative;
+        top: 7rem;
+        display: block;
+        align-items: center;
+        margin-left: 1rem;
+    }
+    #all1{
+        margin-left: 3rem;
+        position: relative;
+        top: 1rem;
+        margin-top: 1rem;
+    }
+    .allservices .mouth{
+        position: relative;
+        left: 4rem;
+    }
+}
